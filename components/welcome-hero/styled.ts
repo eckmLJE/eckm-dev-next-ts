@@ -23,7 +23,7 @@ const WelcomeHero = styled.header`
     display: block;
     width: fit-content;
     background: ${({ theme }) =>
-      `linear-gradient(75deg, ${theme.colors.primary} 6%, ${theme.colors.primary} 23%, ${theme.colors.primary})`};
+      `linear-gradient(90deg, ${theme.colors.primary} 0, ${theme.colors.primary} 100%)`};
     background-size: 1000px 400px;
     background-position: 50vw 50vh;
     will-change: background-position;
