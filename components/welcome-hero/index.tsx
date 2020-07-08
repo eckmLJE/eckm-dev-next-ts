@@ -3,7 +3,7 @@ import * as S from './styled'
 const WelcomeHero: React.FC = () => (
   <S.WelcomeHero>
     <h1>
-      <strong>Lucas</strong> Eckman
+      <span>Lucas Eckman</span>
     </h1>
   </S.WelcomeHero>
 )
