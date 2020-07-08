@@ -1,20 +1,10 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
-import styled from "styled-components";
-
-const H1 = styled.h1`
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import Layout from '../layout'
+import WelcomeHero from '../components/welcome-hero'
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <H1>Hello Next.js 👋</H1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+  <Layout title="Home">
+    <WelcomeHero />
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage
