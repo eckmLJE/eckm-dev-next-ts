@@ -11,6 +11,8 @@ const fadeIn = (endColor: string) => keyframes`
 `
 
 const WelcomeHero = styled.header`
+  position: absolute;
+  margin: 10vh 0 0 20vw;
   color: ${({
     theme: {
       colors: { secondary },
@@ -18,10 +20,12 @@ const WelcomeHero = styled.header`
   }) => secondary};
 
   h1 {
-    margin: 0;
     position: relative;
     display: block;
     width: fit-content;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: clamp(1rem, 8vw, 5rem);
+    font-weight: normal;
     background: ${({ theme }) =>
       `linear-gradient(90deg, ${theme.colors.primary} 0, ${theme.colors.primary} 100%)`};
     background-size: 1000px 400px;
@@ -32,14 +36,12 @@ const WelcomeHero = styled.header`
     animation-delay: 0.5s;
     animation-timing-function: linear;
     z-index: 100;
-    font-size: clamp(1rem, 8vw, 5rem);
 
     span {
       position: relative;
       display: inline;
       margin: 0;
       color: transparent;
-      z-index: -1;
       animation: ${({
           theme: {
             colors: { secondary },
@@ -47,6 +49,7 @@ const WelcomeHero = styled.header`
         }) => fadeIn(secondary)}
         1s forwards;
       animation-delay: 0.8s;
+      z-index: -1;
     }
   }
 `

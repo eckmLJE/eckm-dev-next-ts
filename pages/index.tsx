@@ -1,10 +1,5 @@
-import Layout from '../layout'
 import WelcomeHero from '../components/welcome-hero'
 
-const IndexPage = () => (
-  <Layout title="Home">
-    <WelcomeHero />
-  </Layout>
-)
+const IndexPage = () => <WelcomeHero />
 
 export default IndexPage

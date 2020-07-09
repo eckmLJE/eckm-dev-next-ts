@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
-import * as S from './styled'
 
-type Props = {
+interface Props {
   children?: ReactNode
   title?: string
 }
@@ -11,14 +10,18 @@ const Layout: React.FC<Props> = ({
   children,
   title = 'This is the default title',
 }) => (
-  <S.Layout>
+  <>
     <Head>
       <title>{`${title} | Lucas Eckman`}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+        rel="stylesheet"
+      />
     </Head>
     {children}
-  </S.Layout>
+  </>
 )
 
 export default Layout
